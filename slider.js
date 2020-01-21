@@ -7,10 +7,10 @@ const sliderHeaders = document.getElementById("slider-headers");
 const dots = document.querySelectorAll(".dot");
 const headers = sliderHeaders.children;
 
-const city = document.querySelectorAll(".city");
-const apartmentArea = document.querySelectorAll(".apartment-area");
-const repairTime = document.querySelectorAll(".repair-time");
-const repairCost = document.querySelectorAll(".repair-cost");
+const city = document.getElementById("city");
+const apartmentArea = document.getElementById("apartment-area");
+const repairTime = document.getElementById("repair-time");
+const repairCost = document.getElementById("repair-cost");
 
 const sliderInfo = [
   {
@@ -61,10 +61,10 @@ for (let i = 0; i < sliderInfo.length; i++) {
 //функции
 function applySettings(slide) {
   sliderImage.src = sliderInfo[slide].src;
-  city.textContent = sliderInfo[slide].city;
-  apartmentArea.textContent = sliderInfo[slide].apartmentArea;
-  repairTime.textContent = sliderInfo[slide].repairTime;
-  repairCost.textContent = sliderInfo[slide].repairCost;
+  city.innerHTML = sliderInfo[slide].city;
+  apartmentArea.innerHTML = sliderInfo[slide].apartmentArea;
+  repairTime.innerHTML = sliderInfo[slide].repairTime;
+  repairCost.innerHTML = sliderInfo[slide].repairCost;
 
   for (let i = 0; i < sliderInfo.length; i++) {
     headers[i].classList.remove("active");
